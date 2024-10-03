@@ -38,7 +38,7 @@ const Footer = () => {
                 <p className='text-white font-semibold text-[22px]'>Contacts</p>
                <div className='flex gap-x-3 items-center'>
                <img src="/img/Mail2.svg"/>
-               <a href='mailto:jakob.garcia@gmail.com' className='text-white  font-normal text-[18px] '>jakob.garcia@gmail.com</a>     
+               <a href='mailto:info@radiantplanks.com' className='text-white  font-normal text-[18px] '>info@radiantplanks.com</a>     
                </div>
 
                <div className='flex gap-x-3 items-center'>
