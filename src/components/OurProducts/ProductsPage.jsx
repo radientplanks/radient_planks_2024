@@ -196,7 +196,7 @@ const ProductsPage = ({active,setActive}) => {
       <div className='w-full md:h-[290px] h-[200px] mb-14 relative '>
          <div className='absolute w-full h-full bg-black/60 flex justify-center items-center '>
             <p className='font-qilona xl:text-[90px] text-[40px] text-white/80 '>{collectionName === "eco" && "Eco Elegance Series"}</p>
-            <p className='font-qilona xl:text-[90px] text-[40px] text-white/80 '>{collectionName === "luxicore" && "Luxicore Legacy Series"}</p>
+            <p className='font-qilona xl:text-[90px] text-[34px] text-white/80 '>{collectionName === "luxicore" && "Luxicore Legacy Series"}</p>
             <p className='font-qilona xl:text-[90px] text-[40px] text-white/80 '>{collectionName === "viva" && "Viva Wood Series"}</p>
          </div>
          {collectionName === "eco" && <img src="/img/EcoCrafted.jpg" alt='Eco Elegance Series' className='w-full h-full object-cover'/>}

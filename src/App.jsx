@@ -8,6 +8,8 @@ import Inquire from './components/Inquire/Inquire'
 import ProductsPage from './components/OurProducts/ProductsPage';
 import ProductDetails from './components/OurProducts/ProductDetails';
 import AboutUs from './components/AboutUs/AboutUs';
+import Resources from './components/Resources/Resources';
+import ContactUs from './components/Contact/ContactUs';
 function App() {
  
   const [active, setActive] = useState("");
@@ -20,6 +22,9 @@ function App() {
        <Route path="/collection/:collectionName" element={<ProductsPage active={active} setActive={setActive}/>}/>
        <Route path="/product/:collectionName/:id" element={<ProductDetails/>}/>
        <Route path="/about" element={<AboutUs/>}/>
+       <Route path="/resources" element={<Resources/>}/>
+       <Route path="/contact" element={<ContactUs/>}/>
+
      </Routes>
      <Footer/>
     </BrowserRouter>

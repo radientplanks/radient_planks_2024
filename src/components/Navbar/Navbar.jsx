@@ -50,7 +50,7 @@ const Navbar = ({active, setActive}) => {
 
        <div className='Links flex  gap-x-10  '>
            <Link to="/">
-             <div className='flex items-center'>
+             <div onClick={()=>setOpenCollection(false)} className='flex items-center'>
                <p className='link xl:text-[16px] 2xl:text-[18px] ' >Home</p>
              </div>
            </Link>
@@ -79,21 +79,21 @@ const Navbar = ({active, setActive}) => {
            </div>
 
            <Link to="/resources">
-             <div className='flex items-center gap-x-2'>
+             <div onClick={()=>setOpenCollection(false)} className='flex items-center gap-x-2'>
                <p className='link xl:text-[16px] 2xl:text-[18px] ' >Resources</p>
                <img src="/img/down.svg"/>
              </div>
            </Link>
 
            <Link to="/about">
-             <div className='flex items-center gap-x-2'>
+             <div onClick={()=>setOpenCollection(false)} className='flex items-center gap-x-2'>
                <p className='link xl:text-[16px] 2xl:text-[18px] ' >Why Radiant</p>
                <img src="/img/down.svg"/>
              </div>
            </Link>
 
            <Link to="/contact">
-             <div className='flex items-center gap-x-2'>
+             <div onClick={()=>setOpenCollection(false)} className='flex items-center gap-x-2'>
                <p className='link xl:text-[16px] 2xl:text-[18px] ' >Contact Us</p>
              </div>
            </Link>
@@ -124,9 +124,9 @@ const Navbar = ({active, setActive}) => {
            
            {openNav && 
            <div className='absolute z-50 w-full top-0 left-0 flex flex-col gap-y-6 items-center justify-center bg-white backdrop-blur h-[100vh] py-10  '>
-              <X color='#25304C' className='absolute top-10 right-10 ' onClick={()=>setOpenNav(!openNav)}/>
+              <X color='#25304C' className='absolute top-10 right-10 ' onClick={()=>{setOpenNav(!openNav); setOpenCollection(false)}}/>
             <> 
-           <Link to="/" onClick={()=>setOpenNav(false)}>
+           <Link to="/" onClick={()=>{setOpenNav(false); setOpenCollection(false)}}>
              <div className='flex items-center'>
                <p className='link text-[22px] ' >Home</p>
              </div>
@@ -138,7 +138,9 @@ const Navbar = ({active, setActive}) => {
                <img src="/img/down.svg"/>
              </div>
              {openCollection && 
-              <div className='absolute top-10 w-[250px] h-[155px] rounded-[6px] bg-white z-50 '>
+              <div className='absolute left-1/2 transform -translate-x-1/2 w-[250px] h-[155px] shadow-xl rounded-[6px] bg-white z-50 mx-auto '>
+                <div className=''>
+
                   <Link to="/collection/eco" onClick={() => {setActive("Eco"); setOpenCollection(!openCollection); setOpenNav(false);}} className={`w-full h-[41px]  flex items-center ${active === "Eco" ? "bg-[#F2962233] border-l-[#F29622]" : "border-l-transparent "} border-l-[4px] mt-2  `}>
                     <p className={` ${active === "Eco" ? "text-[#F29622] font-semibold" : "text-[#5F5F5F] font-normal "}  text-[18px]  pl-2 `} >Eco Crafted Elegance Series</p>
                   </Link>
@@ -150,25 +152,25 @@ const Navbar = ({active, setActive}) => {
                   <Link to="/collection/viva" onClick={() => {setActive("Viva"); setOpenCollection(!openCollection); setOpenNav(false);}} className={`w-full h-[41px]  flex items-center ${active === "Viva" ? "bg-[#F2962233] border-l-[#F29622]" : "border-l-transparent "} border-l-[4px] mt-2  `}>
                     <p className={` ${active === "Viva" ? "text-[#F29622] font-semibold" : "text-[#5F5F5F] font-normal "}  text-[18px]  pl-2 `} >Viva Wood Series</p>
                   </Link>
-
+                </div>
               </div> }
            </div>
 
-           <Link to="/resources" onClick={()=>setOpenNav(false)}>
+           <Link to="/resources" onClick={()=>{setOpenNav(false); setOpenCollection(false)}}>
              <div className='flex items-center gap-x-2'>
                <p className='link text-[22px] ' >Resources</p>
                <img src="/img/down.svg"/>
              </div>
            </Link>
 
-           <Link to="/about" onClick={()=>setOpenNav(false)}>
+           <Link to="/about" onClick={()=>{setOpenNav(false); setOpenCollection(false)}}>
              <div className='flex items-center gap-x-2'>
                <p className='link text-[22px] ' >Why Radiant</p>
                <img src="/img/down.svg"/>
              </div>
            </Link>
 
-           <Link to="/contact" onClick={()=>setOpenNav(false)}>
+           <Link to="/contact" onClick={()=>{setOpenNav(false); setOpenCollection(false)}}>
              <div className='flex items-center gap-x-2'>
                <p className='link text-[22px] ' >Contact Us</p>
              </div>

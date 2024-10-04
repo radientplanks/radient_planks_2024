@@ -29,7 +29,7 @@ const Footer = () => {
                 <p className='text-white font-semibold text-[22px]'>Address</p>
                <div className='flex gap-x-3 items-start'>
                <img src="/img/Location.svg" className='mt-1.5 '/>
-               <address className='text-white not-italic font-normal text-[18px] '>1435, 51st Street, Building #5,<br></br> Second Floor, North Bergen, <br></br>NJ 07047</address>     
+               <address className='text-white not-italic font-normal text-[18px] '>1435, 51st Street, Building #5,<br></br> Second Floor, North Bergen, <br></br>USE TX 07047</address>     
                </div>
                
             </div>
