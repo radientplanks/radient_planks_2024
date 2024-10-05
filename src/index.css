@@ -148,3 +148,7 @@
   background-color: white; /* Color for the progress bar */
   transition: width 0.1s linear; /* Smooth animation for progress */
 }
+
+.no-scroll {
+  overflow: hidden;
+}

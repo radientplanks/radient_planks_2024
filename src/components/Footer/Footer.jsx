@@ -11,7 +11,7 @@ const Footer = () => {
     };
   return (
     <div className='bg-[#F4F4F4] w-full h-full font-workSans '>
-        <div className='w-full xl:h-[356px] h-fit py-10 xl:pt-10 mt-3 bg-black '>
+        <div className='w-full  h-fit py-10 xl:pt-10 mt-3 bg-black '>
           <div className='flex flex-row flex-wrap md:px-20 px-8 gap-10 xl:justify-between  '> 
             <div className='flex flex-col gap-y-4 '>
                 <p className='text-white font-semibold text-[22px]'>Products</p>
@@ -25,14 +25,15 @@ const Footer = () => {
                 <li className='text-white  font-normal text-[18px] '>Catalogue</li>     
             </div>
 
-            <div className='flex flex-col gap-y-4 '>
+            {/* <div className='flex flex-col gap-y-4 '>
                 <p className='text-white font-semibold text-[22px]'>Address</p>
                <div className='flex gap-x-3 items-start'>
                <img src="/img/Location.svg" className='mt-1.5 '/>
                <address className='text-white not-italic font-normal text-[18px] '>1435, 51st Street, Building #5,<br></br> Second Floor, North Bergen, <br></br>USE TX 07047</address>     
                </div>
                
-            </div>
+            </div> */}
+
 
             <div className='flex flex-col gap-y-4 '>
                 <p className='text-white font-semibold text-[22px]'>Contacts</p>
@@ -43,17 +44,19 @@ const Footer = () => {
 
                <div className='flex gap-x-3 items-center'>
                <img src="/img/Calling.svg"/>
-               <a href='tel:(846) 435-7173' className='text-white  font-normal text-[18px] '>(846) 435-7173</a>     
+               <a href='tel:(832) 580-0385' className='text-white  font-normal text-[18px] '>(832) 580-0385</a>     
                </div>
                
             </div>
-          </div>
 
-          <div className='flex justify-end items-center gap-x-10  md:px-20 px-8 mt-14 '>
+            <div className='flex justify-center items-center gap-10  '>
             <img src="/img/makeInIndia.svg"/>
             <img src="/img/ISO.svg"/>
             <img src="/img/CE.svg"/>
           </div>
+          </div>
+
+
         </div>
 
  
@@ -69,21 +72,21 @@ const Footer = () => {
           </a>
         </p>
         <div className="flex gap-x-5">
-          <div className="w-[50px] h-[50px] rounded-full group hover:bg-[#F29622]  hover:rotate-180 transition-all duration-500 bg-black flex justify-center items-center ">
+          <div className="w-[40px] h-[40px] rounded-full group hover:bg-[#F29622]  hover:rotate-180 transition-all duration-500 bg-black flex justify-center items-center ">
             <a href="" target="_blank">
-              <InstagramIcon className="text-white" />
+              <InstagramIcon fontSize='small' className="text-white " />
             </a>
           </div>
-          <div className="w-[50px] h-[50px] rounded-full group hover:bg-[#F29622]  hover:rotate-180 transition-all duration-500 bg-black flex justify-center items-center ">
+          <div className="w-[40px] h-[40px] rounded-full group hover:bg-[#F29622]  hover:rotate-180 transition-all duration-500 bg-black flex justify-center items-center ">
             <a href="" target="_blank">
-              <FacebookOutlinedIcon className="text-white" />
+              <FacebookOutlinedIcon fontSize='small' className="text-white" />
             </a>
           </div>
-          <div className="w-[50px] h-[50px] rounded-full group hover:bg-[#F29622]  hover:rotate-180 transition-all duration-500 bg-black flex justify-center items-center ">
-            <GoogleIcon className="text-white" />
+          <div className="w-[40px] h-[40px] rounded-full group hover:bg-[#F29622]  hover:rotate-180 transition-all duration-500 bg-black flex justify-center items-center ">
+            <GoogleIcon fontSize='small' className="text-white" />
           </div>
-          <div className="w-[50px] h-[50px] rounded-full group hover:bg-[#F29622]  hover:rotate-180 transition-all duration-500 bg-black flex justify-center items-center ">
-            <img src="/img/TwitterX.svg" className="h-[24px] w-[24px] " />
+          <div className="w-[40px] h-[40px] rounded-full group hover:bg-[#F29622]  hover:rotate-180 transition-all duration-500 bg-black flex justify-center items-center ">
+            <img src="/img/TwitterX.svg" className="h-[20px] w-[20px] " />
           </div>
         </div>
       </div>
@@ -103,21 +106,21 @@ const Footer = () => {
      <div className='flex gap-x-5 mt-3'>
 
     
-        <div className="w-[50px] h-[50px] rounded-full group hover:bg-[#F29622]  hover:rotate-180 transition-all duration-500 bg-black flex justify-center items-center ">
+        <div className="w-[40px] h-[40px] rounded-full group hover:bg-[#F29622]  hover:rotate-180 transition-all duration-500 bg-black flex justify-center items-center ">
           <a href="" target="_blank">
-            <InstagramIcon className="text-white" />
+            <InstagramIcon fontSize='small' className="text-white" />
           </a>
         </div>
-        <div className="w-[50px] h-[50px] rounded-full group hover:bg-[#F29622]  hover:rotate-180 transition-all duration-500 bg-black flex justify-center items-center ">
+        <div className="w-[40px] h-[40px] rounded-full group hover:bg-[#F29622]  hover:rotate-180 transition-all duration-500 bg-black flex justify-center items-center ">
           <a href="" target="_blank">
-            <FacebookOutlinedIcon className="text-white" />
+            <FacebookOutlinedIcon fontSize='small' className="text-white" />
           </a>
         </div>
-        <div className="w-[50px] h-[50px] rounded-full group hover:bg-[#F29622]  hover:rotate-180 transition-all duration-500 bg-black flex justify-center items-center ">
-          <GoogleIcon className="text-white" />
+        <div className="w-[40px] h-[40px] rounded-full group hover:bg-[#F29622]  hover:rotate-180 transition-all duration-500 bg-black flex justify-center items-center ">
+          <GoogleIcon fontSize='small' className="text-white" />
         </div>
-        <div className="w-[50px] h-[50px] rounded-full group hover:bg-[#F29622]  hover:rotate-180 transition-all duration-500 bg-black flex justify-center items-center ">
-          <img src="/img/TwitterX.svg" className="h-[24px] w-[24px] " />
+        <div className="w-[40px] h-[40px] rounded-full group hover:bg-[#F29622]  hover:rotate-180 transition-all duration-500 bg-black flex justify-center items-center ">
+          <img src="/img/TwitterX.svg" className="h-[20px] w-[20px] " />
         </div>
     </div>
 

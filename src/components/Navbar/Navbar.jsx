@@ -1,12 +1,15 @@
 import { Ellipsis, X } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import Inquire from '../Inquire/Inquire'
+import Inquire2 from '../Inquire2/Inquire2'
 
 const Navbar = ({active, setActive}) => {
 
     const [openNav, setOpenNav] = useState(false)
     const [openCollection, setOpenCollection] = useState(false)
     const [selectedCollection, setSelectedCollection] = useState("")
+    const [inquireOpen, setInquireOpen] = useState(false)
     const location = useLocation();
     // const [active, setActive] = useState("");
     console.log(active)
@@ -41,9 +44,20 @@ const Navbar = ({active, setActive}) => {
           setActive("");
       }
     }, [location.pathname]);
+
+    const inquire = ()=>{
+      console.log("clicked")
+      setInquireOpen(true)
+      document.body.classList.add("no-scroll");
+    }
   return (
     <>
-    <nav className='w-full bg-white h-[100px] xl:flex hidden items-center justify-between 2xl:pl-[100px] 2xl:pr-[120px] xl:pl-[40px] xl:pr-[50px] 2xl:gap-x-14 xl:gap-x-10 font-workSans '>
+    <nav className='w-full relative bg-white h-[100px] xl:flex hidden items-center justify-between 2xl:pl-[100px] 2xl:pr-[120px] xl:pl-[40px] xl:pr-[50px] 2xl:gap-x-14 xl:gap-x-10 font-workSans '>
+
+      {inquireOpen && <div className=' absolute top-0 left-0 right-0 bottom-0 z-50  '>
+       <Inquire2 inquireOpen={inquireOpen} setInquireOpen={setInquireOpen} />      
+        </div>}
+
        <Link to="/" className='Logo'>
           <img src="/img/Logo.png"/>
        </Link>
@@ -99,7 +113,7 @@ const Navbar = ({active, setActive}) => {
            </Link>
        </div>
 
-       <div className='Inquiry flex cursor-pointer '>
+       <div onClick={()=>inquire()} className='Inquiry flex cursor-pointer '>
          <div className='w-[195px] h-[40px] rounded-[6px] flex justify-center items-center gap-x-3 border-[2px] border-white shadow-2xl bg-gradient-to-tl from-[#FFBA63] via-[#F6A53F] to-[#F29622] '>
            <img src="/img/Mail.svg"/>
            <p className='font-semibold text-[16px] text-white '>Quick Inquiry</p>
@@ -108,7 +122,13 @@ const Navbar = ({active, setActive}) => {
     </nav>
 {/* {Mobile Nav} */}
     <nav className='relative w-full h-fit  bg-white  xl:hidden  '>
-          
+    {inquireOpen && <div className='w-full h-screen absolute top-0 left-0 right-0 bottom-0 z-50'>
+    
+       
+       <Inquire2 inquireOpen={inquireOpen} setInquireOpen={setInquireOpen}/>
+      
+       
+        </div>}
           <div className='w-full py-5 flex justify-between items-center'>
           <Link to="/" >
           <div className='logo w-[190px] pl-5 '>
@@ -116,7 +136,7 @@ const Navbar = ({active, setActive}) => {
            </div>
           </Link>
            <div className='pr-5'>
-           {!openNav && <Ellipsis color='#25304C' onClick={()=>setOpenNav(!openNav)}/>} 
+           {!openNav && <Ellipsis color='#25304C' className='cursor-pointer' onClick={()=>setOpenNav(!openNav)}/>} 
           
            </div>
  
@@ -176,7 +196,7 @@ const Navbar = ({active, setActive}) => {
              </div>
            </Link>
             </> 
-            <div className='w-[195px] h-[40px] rounded-[6px] flex justify-center items-center gap-x-3 border-[2px] border-white shadow-2xl bg-gradient-to-tl from-[#FFBA63] via-[#F6A53F] to-[#F29622] '>
+            <div onClick={()=>{inquire();setOpenNav(false); setOpenCollection(false) }} className='w-[195px] h-[40px] rounded-[6px] flex justify-center items-center cursor-pointer gap-x-3 border-[2px] border-white shadow-2xl bg-gradient-to-tl from-[#FFBA63] via-[#F6A53F] to-[#F29622] '>
               <img src="/img/Mail.svg"/>
               <p className='font-semibold text-[16px] text-white '>Quick Inquiry</p>
              </div>

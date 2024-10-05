@@ -71,7 +71,7 @@ const Hero = () => {
         spaceBetween={50}
         slidesPerView={1}
         // navigation
-        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        autoplay={{ delay: 8000, disableOnInteraction: false }}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
@@ -81,6 +81,7 @@ const Hero = () => {
         {/* Slide 1 */}
         <SwiperSlide>
           <div className='w-full h-[732px] relative'>
+            <Link to="/collection/eco">
             <div className='absolute w-full h-full flex  xl:flex-row flex-col-reverse justify-end xl:justify-between items-center xl:px-20 top-0 left-0 right-0 bottom-0'>
               <div>
                 <div className='flex items-center gap-x-4'>
@@ -135,12 +136,14 @@ const Hero = () => {
               </div>
             </div>
             <img src="/img/EcoCrafted.png" className='w-full h-full object-cover' alt="Eco Crafted" />
+            </Link>
           </div>
         </SwiperSlide>
 
         {/* Slide 2 */}
         <SwiperSlide>
           <div className='w-full h-[732px] relative'>
+          <Link to="/collection/viva">
             <div className='absolute w-full h-full flex xl:flex-row flex-col-reverse justify-end xl:justify-between items-center xl:px-20 top-0 left-0 right-0 bottom-0'>
               <div>
                 <p className={`xl:text-[56px] text-[26px] font-qilona mt-3 xl:mt-0 text-white transition-all duration-1500 ease-in-out ${getAnimationClasses(1, 'title')}`}>
@@ -187,12 +190,14 @@ const Hero = () => {
               </div>
             </div>
             <img src="/img/VivaWood.png" className='w-full h-full object-cover' alt="Viva Wood" />
+          </Link>
           </div>
         </SwiperSlide>
 
         {/* Slide 3 */}
         <SwiperSlide>
           <div className='w-full h-[732px] relative'>
+          <Link to="/collection/luxicore">
             <div className='absolute w-full h-full flex  xl:flex-row flex-col-reverse justify-end xl:justify-between items-center xl:px-20 top-0 left-0 right-0 bottom-0'>
               <div>
                 <p className={`xl:text-[56px] text-[26px] font-qilona mt-3 xl:mt-0 text-white transition-all duration-1500 ease-in-out ${getAnimationClasses(2, 'title')}`}>
@@ -238,6 +243,7 @@ const Hero = () => {
               </div>
             </div>
             <img src="/img/Luxicore.png" className='w-full h-full' alt="Luxicore" />
+          </Link>
           </div>
         </SwiperSlide>
 

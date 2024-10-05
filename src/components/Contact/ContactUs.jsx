@@ -1,16 +1,15 @@
-import React, {useEffect, useState} from 'react'
+import React from "react";
+import Inquire from "../Inquire/Inquire";
+
 
 const ContactUs = () => {
-    const [isLoaded, setIsLoaded] = useState(false);
 
-    useEffect(() => {
-      setIsLoaded(true);
-    }, []);
+
   return (
-    <div className='w-full h-screen mt-3 bg-white flex justify-center items-center '>
-       <p className={`md:text-[46px] text-[30px] transition-all duration-1000 ${isLoaded && "scale-150"} font-karid `}>Coming Soon!</p>
+    <div className="">
+       <Inquire/>
     </div>
-  )
-}
+  );
+};
 
-export default ContactUs
+export default ContactUs;
