@@ -85,7 +85,8 @@ const Inquire = () => {
            <p className='text-[#F29622] text-center text-[16px] mt-1 font-[600]'>{result}</p>
         </div>
     </div>
-        <img src="/img/EcoCrafted.jpg" className='w-full h-full object-cover '/>
+        <img src="/img/contactBanner.png" className='w-full h-full xl:block hidden  '/>
+        <img src="/img/EcoCrafted.jpg" className='w-full h-full block xl:hidden object-cover '/>
       
     </div>
   )

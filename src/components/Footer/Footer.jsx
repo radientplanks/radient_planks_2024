@@ -50,7 +50,7 @@ const Footer = () => {
             </div>
 
             <div className='flex justify-center items-center gap-10  '>
-            <img src="/img/makeInIndia.svg"/>
+            {/* <img src="/img/makeInIndia.svg"/> */}
             <img src="/img/ISO.svg"/>
             <img src="/img/CE.svg"/>
           </div>
