@@ -52,26 +52,26 @@ const Applications = () => {
       </div>
 
       <div className='md:hidden flex flex-col gap-y-5 '>
-        <div className='relative flex justify-center '>
+        <Link to="product/eco/8" onClick={()=>handleLinkClick()} className='relative flex justify-center '>
         <p className='font-qilona text-[40px] text-white absolute bottom-4  '>Office</p>
         <img src="/img/Office.jpg" alt='Office' className='w-[90vw] h-[250px] mt-10 '/>
-        </div>
-        <div className='relative flex justify-center '>
+        </Link>
+        <Link to="/product/eco/9" onClick={()=>handleLinkClick()} className='relative flex justify-center '>
         <p className='font-qilona text-[40px] text-white absolute bottom-4  '>Kitchen</p>
         <img src="/img/Kitchen.jpg" alt='Kitchen' className='w-[90vw] h-[250px] '/>
-        </div>
-        <div className='relative flex justify-center '>
+        </Link>
+        <Link to="/product/viva/16" onClick={()=>handleLinkClick()} className='relative flex justify-center '>
         <p className='font-qilona text-[40px] text-white absolute bottom-4  '>Living room</p>
         <img src="/img/Living.jpg" alt='Living room' className='w-[90vw] h-[250px] '/>
-        </div>
-        <div className='relative flex justify-center '>
+        </Link>
+        <Link to='/product/eco/5' onClick={()=>handleLinkClick()} className='relative flex justify-center '>
         <p className='font-qilona text-[40px] text-white absolute bottom-4  '>Bedroom</p>
         <img src="/img/Bedroom.jpg" alt='Bedroom' className='w-[90vw] h-[250px] '/>
-        </div>
-        <div className='relative flex justify-center '>
+        </Link>
+        <Link to="/product/luxicore/18" onClick={()=>handleLinkClick()} className='relative flex justify-center '>
         <p className='font-qilona text-[40px] text-white absolute bottom-4  '>Bathroom</p>
         <img src="/img/Bathroom.jpg" alt='Bathroom' className='w-[90vw] h-[250px] '/>
-        </div>
+        </Link>
         
 
       </div>
